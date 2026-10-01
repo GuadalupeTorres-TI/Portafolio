@@ -195,7 +195,78 @@ h1 > span,
   }
 }
 
+/* Certificaciones y diplomas */
+#certificaciones {
+  padding: 70px 0;
+  scroll-margin-top: 100px;
+}
 
+#certificaciones h2 {
+  margin: 12px 0;
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.cert-intro {
+  color: #b0bfd8;
+  margin-bottom: 28px;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  background: #111e35;
+  border: 1px solid #2a3c59;
+  border-radius: 16px;
+}
+
+.cert-tipo {
+  color: #83baff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cert-card h3 {
+  color: #f1f5ff;
+  font-size: 21px;
+  line-height: 1.35;
+  margin: 14px 0;
+}
+
+.cert-card p {
+  color: #b0bfd8;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0 0 24px;
+}
+
+.cert-card a {
+  color: #83baff;
+  font-weight: 600;
+  margin-top: auto;
+  align-self: flex-start;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.cert-card a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 700px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
+    
 </style></head>
 <body><a class="skip" href="#main">Saltar al contenido</a><header><nav class="wrap" aria-label="Navegación principal"><a class="brand" href="#inicio" aria-label="Guadalupe Torres, inicio">gt<span>.
 </span></a><button class="menu" aria-expanded="false" aria-controls="navigation">Menú</button><div class="navlinks" id="navigation"><a href="#proyectos">Proyectos</a><a href="#sobre-mi">Sobre mí</a>
@@ -276,6 +347,75 @@ h1 > span,
                         validación de datos y diseño de flujos para apoyar procesos de CRM.</p><div class="tags"><span>n8n</span><span>Odoo</span><span>Webhooks</span><span>JSON</span>
                             <span>AI Agent</span></div></div></div></section>
 
+    <section id="certificaciones" class="certificaciones">
+  <span class="eyebrow">Formación continua</span>
+  <h2>Certificaciones y diplomas</h2>
+  <p class="cert-intro">
+    Cursos y participaciones en calidad de software,
+    investigación e innovación tecnológica.
+  </p>
+
+  <div class="cert-grid">
+    <article class="cert-card">
+      <span class="cert-tipo">Calidad de software</span>
+      <h3>Tester · Aseguramiento de Calidad</h3>
+      <p>Capacítate para el empleo.</p>
+      <a
+        href="https://github.com/user-attachments/files/31679189/Tester-47185846-5c51-4669-a176-14301dc2c2bc_certificado.pdf"
+        target="_blank"
+        rel="noopener noreferrer">
+        Ver certificado ↗
+      </a>
+    </article>
+
+    <article class="cert-card">
+      <span class="cert-tipo">Innovación tecnológica</span>
+      <h3>ExpoCiencias Tamaulipas</h3>
+      <p>
+        Certamen Estatal de Creatividad e Innovación Tecnológica.
+        Proyecto: Conservación cultural e histórica en Tampico
+        a través de la IA.
+      </p>
+      <a
+        href="https://github.com/user-attachments/files/31679200/ExpoCiencias-Tamps.pdf"
+        target="_blank"
+        rel="noopener noreferrer">
+        Ver constancia ↗
+      </a>
+    </article>
+
+    <article class="cert-card">
+      <span class="cert-tipo">Investigación · 2025</span>
+      <h3>Encuentro de Jóvenes Investigadores Tamaulipas</h3>
+      <p>
+        Desarrollo y evaluación de algoritmos de procesamiento
+        de lenguaje natural para detectar y analizar sesgos
+        en el contenido digital.
+      </p>
+      <a
+        href="https://github.com/user-attachments/files/31679212/Jovenes-investigadores.pdf"
+        target="_blank"
+        rel="noopener noreferrer">
+        Ver constancia ↗
+      </a>
+    </article>
+
+    <article class="cert-card">
+      <span class="cert-tipo">Ciencia y cultura</span>
+      <h3>STEAM Tamaulipas</h3>
+      <p>
+        Viernes de Detectives del Conocimiento, Ciencia y Cultura.
+        Taller de Aventuras Virtuales: Taller 3D.
+      </p>
+      <a
+        href="https://github.com/user-attachments/files/31679216/Detectives-del-conocimiento.pdf"
+        target="_blank"
+        rel="noopener noreferrer">
+        Ver constancia ↗
+      </a>
+    </article>
+  </div>
+</section>
 
 <section id="contacto" class="contact">
   <div>
