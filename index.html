@@ -652,7 +652,10 @@ const menu=document.querySelector('.menu'),navigation=document.querySelector('.n
     document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
     document.querySelectorAll('.project').forEach(project=>{project.hidden=button.dataset.filter!=='all'&&project.dataset.category!==button.dataset.filter})}));
 
-    <script>
+   </script>
+
+<script>
+(() => {
 (() => {
   const barra = document.getElementById("barra-principal");
   if (!barra) return;
@@ -718,4 +721,5 @@ const menu=document.querySelector('.menu'),navigation=document.querySelector('.n
   actualizarBarra();
 })();
 </script>
-</script></body></html>
+</body>
+</html>
