@@ -134,6 +134,91 @@ h1 > span,
   transform: none;
   text-align: center;
 }
+
+    /* Inicio: presentación y código a la izquierda, foto a la derecha */
+#inicio.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  grid-template-areas:
+    "presentacion foto"
+    "codigo foto"
+    "etiqueta foto";
+  column-gap: 60px;
+  row-gap: 24px;
+  align-items: start;
+}
+
+#inicio > div:first-child {
+  grid-area: presentacion;
+  min-width: 0;
+}
+
+/* Permite distribuir la foto y el código por separado */
+#inicio > .visual {
+  display: contents;
+}
+
+/* Foto independiente */
+#inicio .foto-perfil {
+  grid-area: foto;
+  display: block;
+  position: static;
+  width: 100%;
+  max-width: 390px;
+  height: auto;
+  margin: 0;
+  justify-self: center;
+  align-self: center;
+  border-radius: 24px;
+  border: 2px solid #83baff;
+}
+
+/* Quita las iniciales y círculos sobre la foto */
+#inicio .orbit,
+#inicio .monogram {
+  display: none;
+}
+
+/* Código debajo de la presentación */
+#inicio .code {
+  grid-area: codigo;
+  position: static;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  transform: none;
+}
+
+#inicio .code pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Frase debajo del código */
+#inicio .visual-tag {
+  grid-area: etiqueta;
+  position: static;
+  justify-self: start;
+  transform: none;
+}
+
+/* En celular, cada elemento ocupa su propio espacio */
+@media (max-width: 700px) {
+  #inicio.hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "presentacion"
+      "foto"
+      "codigo"
+      "etiqueta";
+    gap: 28px;
+  }
+
+  #inicio .foto-perfil {
+    max-width: 310px;
+  }
+}
 </style></head>
 <body><a class="skip" href="#main">Saltar al contenido</a><header><nav class="wrap" aria-label="Navegación principal"><a class="brand" href="#inicio" aria-label="Guadalupe Torres, inicio">gt<span>.
 </span></a><button class="menu" aria-expanded="false" aria-controls="navigation">Menú</button><div class="navlinks" id="navigation"><a href="#proyectos">Proyectos</a><a href="#sobre-mi">Sobre mí</a>
