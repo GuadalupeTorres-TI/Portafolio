@@ -96,46 +96,7 @@ h1 > span,
   display: none;
 }
 
-    /* Foto y código en la columna derecha */
-.hero > .visual {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 24px;
-  border-radius: 24px;
-  overflow: hidden;
-}
-
-.foto-perfil {
-  display: block;
-  width: 100%;
-  max-width: 310px;
-  height: auto;
-  border-radius: 18px;
-  border: 2px solid #83baff;
-}
-
-/* Retirar los adornos detrás de la foto */
-.hero > .visual > .orbit,
-.hero > .visual > .monogram {
-  display: none;
-}
-
-/* Conservar el código debajo de la foto */
-.hero > .visual > .code {
-  width: 100%;
-  max-width: 400px;
-  margin: 0;
-  transform: none;
-}
-
-.hero > .visual > .visual-tag {
-  position: static;
-  transform: none;
-  text-align: center;
-}
-
-    /* Inicio: presentación y código a la izquierda, foto a la derecha */
+/* Distribución definitiva del inicio */
 #inicio.hero {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
@@ -153,35 +114,30 @@ h1 > span,
   min-width: 0;
 }
 
-/* Permite distribuir la foto y el código por separado */
+/* Foto y código ocupan espacios independientes */
 #inicio > .visual {
   display: contents;
 }
 
-/* Foto independiente */
+/* Foto con el arco de la segunda captura */
 #inicio .foto-perfil {
   grid-area: foto;
   display: block;
   position: static;
   width: 100%;
-  max-width: 390px;
+  max-width: 460px;
   height: auto;
-  margin: 0;
+  margin: 12px 0 0;
   justify-self: center;
-  align-self: center;
-  border-radius: 24px;
-  border: 2px solid #83baff;
+  align-self: start;
+  border: none;
+  border-radius: 180px 180px 12px 12px;
 }
 
-/* Quita las iniciales y círculos sobre la foto */
-#inicio .orbit,
-#inicio .monogram {
-  display: none;
-}
-
-/* Código debajo de la presentación */
+/* Código a la izquierda, debajo de la presentación */
 #inicio .code {
   grid-area: codigo;
+  display: block;
   position: static;
   width: 100%;
   max-width: none;
@@ -195,15 +151,23 @@ h1 > span,
   overflow-wrap: anywhere;
 }
 
-/* Frase debajo del código */
+/* Frase debajo del cuadro de código */
 #inicio .visual-tag {
   grid-area: etiqueta;
+  display: block;
   position: static;
   justify-self: start;
   transform: none;
+  text-align: center;
 }
 
-/* En celular, cada elemento ocupa su propio espacio */
+/* Eliminar letras y círculos sobre la foto */
+#inicio .orbit,
+#inicio .monogram {
+  display: none;
+}
+
+/* Distribución para celular */
 @media (max-width: 700px) {
   #inicio.hero {
     grid-template-columns: minmax(0, 1fr);
@@ -216,109 +180,6 @@ h1 > span,
   }
 
   #inicio .foto-perfil {
-    max-width: 310px;
-  }
-}
-
-    /* Inicio con presentación y foto */
-#inicio.hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  grid-template-areas: "presentacion foto";
-  gap: 55px;
-  align-items: center;
-}
-
-#inicio > div:first-child {
-  grid-area: presentacion;
-}
-
-/* Contenedor de la foto */
-#inicio > .visual {
-  grid-area: foto;
-  display: block;
-  position: relative;
-  width: 100%;
-  max-width: 460px;
-  min-height: 0;
-  margin: 0 auto;
-  padding: 0;
-  overflow: hidden;
-  border-radius: 180px 180px 12px 12px;
-  background: transparent;
-}
-
-/* Foto completa, sin borde */
-#inicio .foto-perfil {
-  display: block;
-  position: static;
-  width: 100%;
-  max-width: none;
-  height: auto;
-  margin: 0;
-  border: none;
-  border-radius: 0;
-}
-
-/* Ocultar código y adornos */
-#inicio .code,
-#inicio .orbit,
-#inicio .monogram,
-#inicio .visual-tag {
-  display: none;
-}
-
-/* Adaptación a celular */
-@media (max-width: 700px) {
-  #inicio.hero {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      "presentacion"
-      "foto";
-    gap: 32px;
-  }
-
-  #inicio > .visual {
-    max-width: 350px;
-  }
-}
-
-    /* Conservar el formato alto y el arco de la foto */
-#inicio > .visual {
-  display: block;
-  width: 100%;
-  max-width: none;
-  min-height: 0;
-  aspect-ratio: 484 / 714;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  border-radius: 180px 180px 12px 12px;
-  background: transparent;
-}
-
-#inicio .foto-perfil {
-  display: block;
-  width: 100%;
-  max-width: none;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border: none;
-  border-radius: 0;
-  margin: 0;
-}
-
-/* Dejar únicamente la foto */
-#inicio .code,
-#inicio .orbit,
-#inicio .monogram,
-#inicio .visual-tag {
-  display: none !important;
-}
-
-@media (max-width: 700px) {
-  #inicio > .visual {
     max-width: 350px;
     margin: 0 auto;
   }
