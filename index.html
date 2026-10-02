@@ -464,7 +464,90 @@ html {
 <section id="proyectos"><div class="sectiontop"><div><span class="eyebrow">01 / Experiencia </span><h2>De la idea a la práctica.</h2></div>
     <p>Una selección de experiencias profesionales y proyectos académicos.</p></div><div class="filters" role="group" aria-label="Filtrar proyectos">
         <button class="filter" data-filter="all" aria-pressed="true">Todos</button><button class="filter" data-filter="web" aria-pressed="false">Desarrollo web</button>
-        <button class="filter" data-filter="qa" aria-pressed="false">QA Testing</button><button class="filter" data-filter="ai" aria-pressed="false">Automatización</button></div><div class="projects">
+        <button class="filter" data-filter="qa" aria-pressed="false">QA Testing</button><button class="filter" data-filter="ai" aria-pressed="false">Automatización</button></div>
+    <div class="projects">
+        <article class="project" data-category="qa">
+  <img
+    class="imagen-proyecto"
+    src="QA.png"
+    alt="Ilustración de pruebas y detección de errores de software"
+    loading="lazy"
+  >
+
+  <div class="projectbody">
+    <span class="meta">QA Testing · Desarrollo web · Proyecto personal</span>
+
+    <h3>QA Auditor</h3>
+
+    <p>
+      Aplicación web que analiza una URL, revisa hasta 20 enlaces
+      y registra errores de consola. Presenta los resultados
+      en un panel y permite exportar el reporte.
+    </p>
+
+    <div class="tags">
+      <span>React</span>
+      <span>Node.js</span>
+      <span>Express</span>
+      <span>Playwright</span>
+      <span>Vercel</span>
+      <span>Render</span>
+    </div>
+
+    <div class="actions">
+      <a
+        class="btn primary"
+        href="https://qa-saas-frontend.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Probar aplicación ↗
+      </a>
+
+      <a
+        class="btn"
+        href="https://github.com/GuadalupeTorres-TI/qa-saas-frontend"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Código frontend ↗
+      </a>
+
+      <a
+        class="btn"
+        href="https://github.com/GuadalupeTorres-TI/GuadalupeTorres-TI.test"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Código backend ↗
+      </a>
+    </div>
+
+    <details>
+      <summary>Cómo desarrollé el proyecto ↗</summary>
+
+      <p>
+        Desarrollé una interfaz en React conectada a una API
+        con Node.js y Express. Utilicé Playwright para automatizar
+        la navegación y recopilar los resultados de la revisión.
+      </p>
+
+      <ul>
+        <li>Revisión de respuestas HTTP de hasta 20 enlaces.</li>
+        <li>Registro de errores de consola durante la navegación.</li>
+        <li>Panel de resultados con estados de carga y mensajes de error.</li>
+        <li>Descarga del reporte en TXT e impresión como PDF.</li>
+        <li>Despliegue del frontend en Vercel y del backend en Render.</li>
+      </ul>
+
+      <p>
+        Alcance: revisión de una página mediante reglas automáticas.
+        No sustituye una auditoría completa de seguridad,
+        accesibilidad o pruebas funcionales.
+      </p>
+    </details>
+  </div>
+</article>
 <article class="project" data-category="web"><img class="imagen-proyecto" src="e-commerce.png" alt="Comercio electrónico"><div class="art art1" aria-hidden="true">
     <span class="artlabel">01 — E-Commerce</span><div class="browsermock"><div class="mockhead">GIFARMA &nbsp; · &nbsp; TIENDA ONLINE</div><div class="mockbody">
     <div><strong>Bienestar<br>a un clic.</strong><div class="mockline"></div></div><div class="bottle"></div></div></div></div><div class="projectbody">
